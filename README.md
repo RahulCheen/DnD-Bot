@@ -2,8 +2,7 @@
  DnD mechanics helper discord bot
 
 # Setup
- You will need a JSON in your parent directory with key "TOKEN" and "APP_ID" containing your bot's private token and application id respectively. These values must both be saved as strings.
- You will also need a JSON in your cogs directory with the key "APP_ID" corresponding to your bot's application id. This value must be saved as an integer.
+ Gimme a bit
 
 # Initial features
  Dice rolling command to simulate dice rolling

@@ -14,7 +14,7 @@ class DiceRoller(commands.Cog):
 
     @commands.command()
     async def sync(self, ctx) -> None:
-        fmt = await ctx.bot.tree.sync(guild=ctx.guild)
+        fmt = await ctx.bot.tree.sync()
         await ctx.send(f'Synced {len(fmt)} commands.')
 
     @app_commands.command(name="roll", description="Roll some dice. Submit 'help' for formatting help.")
@@ -52,5 +52,4 @@ To cast *Eldritch Blast* as a 1st level Warlock with the *Agonizing Blast* Eldri
         await interaction.response.send_message(msg)
 
 async def setup(bot):
-    await bot.add_cog(DiceRoller(bot), 
-                      guilds=[discord.Object(id=1137461025332011148)])
+    await bot.add_cog(DiceRoller(bot))

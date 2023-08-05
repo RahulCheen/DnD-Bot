@@ -4,14 +4,11 @@ import os
 import config
 import asyncio
 
-TOKEN = config.TOKEN
-APP_ID = config.APP_ID
-
 intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix='!',
                    intents=intents,
-                   application_id=APP_ID)
+                   application_id=config.APP_ID)
 
 async def load():
     for file in os.listdir('./cogs'):
@@ -20,6 +17,6 @@ async def load():
 
 async def main():
     await load()
-    await bot.start(TOKEN)
+    await bot.start(config.TOKEN)
 
 asyncio.run(main())
