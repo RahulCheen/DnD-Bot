@@ -2,7 +2,7 @@
  DnD mechanics helper discord bot
 
 # Setup
- Gimme a bit
+ In main directory, you need a .py file named config.py with variables TOKEN and APP_ID set equal to your bot's private token and application id (both as strings). This is imported in mainbot.py
 
 # Initial features
  Dice rolling command to simulate dice rolling
