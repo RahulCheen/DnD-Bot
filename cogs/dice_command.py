@@ -1,7 +1,6 @@
 import discord
 from discord import app_commands
 from discord.ext import commands
-import json
 import pandas as pd
 import random
 
@@ -52,7 +51,6 @@ To cast *Eldritch Blast* as a 1st level Warlock with the *Agonizing Blast* Eldri
 
         await interaction.response.send_message(msg)
 
-APP_ID = json.load(open('config.json'))['APP_ID']
 async def setup(bot):
-    await bot.add_cog(DiceRoller(bot),
-                      guilds=[discord.Object(id=APP_ID)])
+    await bot.add_cog(DiceRoller(bot), 
+                      guilds=[discord.Object(id=1137461025332011148)])
