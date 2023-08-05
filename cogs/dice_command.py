@@ -38,7 +38,7 @@ class DiceRoller(commands.Cog):
             total = sum(outcomes_data.values())
             outcomes_data["Roll Total"] = total
 
-            outcomes = pd.DataFrame(outcomes_data, index=["Values"])
+            outcomes = pd.Series(outcomes_data, name="Values")
             
             msg = f"```{outcomes.to_string()}```"
             
