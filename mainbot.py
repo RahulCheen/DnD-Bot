@@ -14,12 +14,6 @@ bot = commands.Bot(command_prefix='!',
                    intents=intents,
                    application_id=str(APP_ID))
 
-@bot.event
-async def on_message(message):
-    await bot.process_commands(message)
-    if message[0] == '!':
-        return
-
 async def load():
     for file in os.listdir('./cogs'):
         if file.endswith('.py'):
